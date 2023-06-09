@@ -1,10 +1,11 @@
 import "./App.css";
-import Name1 from "./components/Name1.component";
+
+import Name2 from "./components/Name2.component";
 
 const App = () => {
   return (
     <div>
-      <Name1 />
+      <Name2 />
     </div>
   );
 };

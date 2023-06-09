@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Person from "./Person.component";
 
 const Name_2 = () => {
-  const [actualState, newState] = useState({
+  const [actualState, setActualState] = useState({
     persons: [
       {
         name: "Zolika",
@@ -19,10 +19,10 @@ const Name_2 = () => {
   });
 
   const nameChangeHandler = () => {
-    //itt hívjuk meg a useState második paraméterét a newState-et amivel módosítjuk a kezdő vagy éppen az aktuális state-et
+    //itt hívjuk meg a useState második paraméterét a setActualState-et amivel módosítjuk a kezdő vagy éppen az aktuális state-et
 
     //itt csak azt kell megadni amit változtatni szeretnénk (most épp mindkét objektumot megváltoztatom)
-    newState({
+    setActualState({
       persons: [
         {
           name: "Hepuka",
@@ -39,6 +39,7 @@ const Name_2 = () => {
 
   //itt már a módosított state-et írja ki
   console.log(actualState);
+
   return (
     <div className="App">
       <h1>Alapok</h1>
